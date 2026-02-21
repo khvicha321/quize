@@ -9,7 +9,7 @@
 import streamlit as st
 import random
 import time
-from streamlit_autorefresh import st_autorefresh
+
 
 st.set_page_config(page_title="ტესტი — კომპიუტერული ტექნოლოგიები", page_icon="🧠", layout="centered")
 
@@ -459,4 +459,5 @@ else:
             else:
                 st.write("შენი პასუხი:", qq["options"][chosen])
             st.write("სწორი პასუხი:", qq["options"][qq["answer"]])
+
             st.write("სტატუსი:", "✅ სწორი" if ok else "❌ არასწორი")
