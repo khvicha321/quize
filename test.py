@@ -350,15 +350,12 @@ student = st.session_state.student
 st.info(f"მოსწავლე: **{student['name']}** | კლასი: **{student['class']}**")
 
 # ✅ ეს არის მთავარი — ეკრანის ავტოგანახლება ყოველ 1 წამში
-if st.session_state.started and not st.session_state.finished:
-    st_autorefresh(interval=1000, key="timer_refresh")
+
+    
 
 # ----------------------------
 # Timeouts
 # ----------------------------
-if not st.session_state.finished and total_left() <= 0:
-    finish()
-    st.rerun()
 
 # თუ კითხვაზე 40 წამი გავიდა — ავტომატურად გადადის შემდეგზე
 if not st.session_state.finished and q_left() <= 0:
@@ -461,3 +458,4 @@ else:
             st.write("სწორი პასუხი:", qq["options"][qq["answer"]])
 
             st.write("სტატუსი:", "✅ სწორი" if ok else "❌ არასწორი")
+
